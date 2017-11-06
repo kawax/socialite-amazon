@@ -14,6 +14,13 @@ class AmazonProvider extends AbstractProvider implements ProviderInterface
      * @var array
      */
     protected $scopes = ['profile'];
+    
+    /**
+     * The separating character for the requested scopes.
+     *
+     * @var string
+     */
+    protected $scopeSeparator = ' ';
 
     /**
      * {@inheritdoc}
