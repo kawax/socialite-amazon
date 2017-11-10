@@ -10,7 +10,7 @@ use Laravel\Socialite\SocialiteManager;
 
 use Revolution\Socialite\Amazon\AmazonProvider;
 
-class SheetsTest extends TestCase
+class SocialiteTest extends TestCase
 {
     /**
      * @var SocialiteManager
