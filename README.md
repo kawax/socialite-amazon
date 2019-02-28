@@ -7,17 +7,6 @@ https://login.amazon.com/
 composer require revolution/socialite-amazon
 ```
 
-### config/app.php
-
-Not necessary in Laravel >= 5.5
-
-```
-    'providers' => [
-        ...
-        Revolution\Socialite\Amazon\AmazonServiceProvider::class,
-    ]
-```
-
 ### config/services.php
 
 ```
