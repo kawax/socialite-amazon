@@ -14,7 +14,7 @@ class AmazonProvider extends AbstractProvider implements ProviderInterface
      * @var array
      */
     protected $scopes = ['profile'];
-    
+
     /**
      * The separating character for the requested scopes.
      *
@@ -56,7 +56,7 @@ class AmazonProvider extends AbstractProvider implements ProviderInterface
         $response = $this->getHttpClient()
                          ->get('https://api.amazon.com/user/profile', [
                              'headers' => [
-                                 'Authorization' => 'Bearer ' . $token,
+                                 'Authorization' => 'Bearer '.$token,
                              ],
                          ]);
 
@@ -70,9 +70,9 @@ class AmazonProvider extends AbstractProvider implements ProviderInterface
     {
         return (new User())->setRaw($user)->map([
             'id'       => $user['user_id'],
-            'nickname' => $user['name'],
-            'name'     => $user['name'],
-            'email'    => $user['email'],
+            'nickname' => $user['name'] ?? '',
+            'name'     => $user['name'] ?? '',
+            'email'    => $user['email'] ?? '',
             'avatar'   => '',
         ]);
     }
