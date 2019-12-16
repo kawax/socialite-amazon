@@ -2,10 +2,10 @@
 
 namespace Revolution\Socialite\Amazon;
 
-use Laravel\Socialite\SocialiteServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use Laravel\Socialite\Facades\Socialite;
 
-class AmazonServiceProvider extends SocialiteServiceProvider
+class AmazonServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the service provider.
@@ -14,10 +14,13 @@ class AmazonServiceProvider extends SocialiteServiceProvider
      */
     public function boot()
     {
-        Socialite::extend('amazon', function ($app) {
-            $config = $app['config']['services.amazon'];
+        Socialite::extend(
+            'amazon',
+            function ($app) {
+                $config = $app['config']['services.amazon'];
 
-            return Socialite::buildProvider(AmazonProvider::class, $config);
-        });
+                return Socialite::buildProvider(AmazonProvider::class, $config);
+            }
+        );
     }
 }

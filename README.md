@@ -2,6 +2,9 @@
 
 https://login.amazon.com/
 
+## Requirements
+- PHP >= 7.2
+
 ## Installation
 ```
 composer require revolution/socialite-amazon
