@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Tests;
+namespace Revolution\Socialite\Amazon\Tests;
 
 use Mockery as m;
 use stdClass;
