@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Revolution\Socialite\Amazon\Tests;
 
 use Laravel\Socialite\SocialiteServiceProvider;
 use Revolution\Socialite\Amazon\AmazonServiceProvider;
