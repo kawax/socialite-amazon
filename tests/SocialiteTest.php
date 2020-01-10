@@ -11,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\Two\User;
 use Revolution\Socialite\Amazon\AmazonProvider;
+use Revolution\Socialite\Amazon\Tests\TestCase;
 
 class SocialiteTest extends TestCase
 {
