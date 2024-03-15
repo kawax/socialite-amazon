@@ -9,18 +9,13 @@ class AmazonServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the service provider.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        Socialite::extend(
-            'amazon',
-            function ($app) {
-                $config = $app['config']['services.amazon'];
+        Socialite::extend('amazon', function ($app) {
+            $config = $app['config']['services.amazon'];
 
-                return Socialite::buildProvider(AmazonProvider::class, $config);
-            }
-        );
+            return Socialite::buildProvider(AmazonProvider::class, $config);
+        });
     }
 }

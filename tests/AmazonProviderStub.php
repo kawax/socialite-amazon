@@ -28,8 +28,8 @@ class AmazonProviderStub extends AmazonProvider
     {
         return [
             'user_id' => 'foo',
-            'name'    => 'name',
-            'email'   => 'email',
+            'name' => 'name',
+            'email' => 'email',
         ];
     }
 

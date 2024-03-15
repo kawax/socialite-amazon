@@ -3,7 +3,9 @@
 https://login.amazon.com/
 
 ## Requirements
-- PHP >= 7.2
+- PHP >= 8.0
+
+> No version restrictions. It may stop working in future versions.
 
 ## Installation
 ```
@@ -12,7 +14,7 @@ composer require revolution/socialite-amazon
 
 ### config/services.php
 
-```
+```php
     'amazon' => [
         'client_id'     => env('AMAZON_LOGIN_ID'),
         'client_secret' => env('AMAZON_LOGIN_SECRET'),
@@ -30,9 +32,9 @@ AMAZON_LOGIN_REDIRECT=
 ## Usage
 
 routes/web.php
-```
-Route::get('/', 'AmazonController@index');
-Route::get('callback', 'AmazonController@callback');
+```php
+Route::get('/', [AmazonController::class, 'index']);
+Route::get('callback', [AmazonController::class, 'callback']);
 ```
 
 AmazonController

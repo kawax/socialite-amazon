@@ -54,11 +54,11 @@ class AmazonProvider extends AbstractProvider implements ProviderInterface
     protected function getUserByToken($token)
     {
         $response = $this->getHttpClient()
-                         ->get('https://api.amazon.com/user/profile', [
-                             'headers' => [
-                                 'Authorization' => 'Bearer '.$token,
-                             ],
-                         ]);
+            ->get('https://api.amazon.com/user/profile', [
+                'headers' => [
+                    'Authorization' => 'Bearer '.$token,
+                ],
+            ]);
 
         return json_decode($response->getBody(), true);
     }
@@ -69,11 +69,11 @@ class AmazonProvider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => $user['user_id'],
+            'id' => $user['user_id'],
             'nickname' => $user['name'] ?? '',
-            'name'     => $user['name'] ?? '',
-            'email'    => $user['email'] ?? '',
-            'avatar'   => '',
+            'name' => $user['name'] ?? '',
+            'email' => $user['email'] ?? '',
+            'avatar' => '',
         ]);
     }
 }

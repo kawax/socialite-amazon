@@ -55,13 +55,13 @@ class SocialiteTest extends TestCase
         $provider->http->shouldReceive('post')->once()->with(
             'http://token.url',
             [
-                'headers'     => ['Accept' => 'application/json'],
+                'headers' => ['Accept' => 'application/json'],
                 'form_params' => [
-                    'client_id'     => 'client_id',
+                    'client_id' => 'client_id',
                     'client_secret' => 'client_secret',
-                    'code'          => 'code',
-                    'redirect_uri'  => 'redirect_uri',
-                    'grant_type'    => 'authorization_code',
+                    'code' => 'code',
+                    'redirect_uri' => 'redirect_uri',
+                    'grant_type' => 'authorization_code',
                 ],
             ]
         )->andReturn($response = m::mock(stdClass::class));
