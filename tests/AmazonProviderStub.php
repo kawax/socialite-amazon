@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Revolution\Socialite\Amazon\Tests;
 
 use Mockery as m;
-use stdClass;
 use Revolution\Socialite\Amazon\AmazonProvider;
+use stdClass;
 
 class AmazonProviderStub extends AmazonProvider
 {

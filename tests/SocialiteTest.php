@@ -2,16 +2,14 @@
 
 namespace Revolution\Socialite\Amazon\Tests;
 
-use Mockery as m;
-
-use stdClass;
 use Illuminate\Contracts\Session\Session;
-use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\Two\User;
+use Mockery as m;
 use Revolution\Socialite\Amazon\AmazonProvider;
-use Revolution\Socialite\Amazon\Tests\TestCase;
+use stdClass;
 
 class SocialiteTest extends TestCase
 {
