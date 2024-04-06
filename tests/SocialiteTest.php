@@ -15,9 +15,9 @@ class SocialiteTest extends TestCase
 {
     public function tearDown(): void
     {
-        parent::tearDown();
-
         m::close();
+
+        parent::tearDown();
     }
 
     public function testInstance()
