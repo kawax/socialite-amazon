@@ -43,14 +43,6 @@ class AmazonProvider extends AbstractProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    protected function getTokenFields($code)
-    {
-        return parent::getTokenFields($code) + ['grant_type' => 'authorization_code'];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     protected function getUserByToken($token)
     {
         $response = $this->getHttpClient()
